@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+$ip = $_SERVER['REMOTE_ADDR'];
+$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}"));
+echo $details->country;
+$x=$details->country;
+echo $x;
+
+
+if ($x = "US")
+{
+
+ echo "<meta http-equiv=\"refresh\" content=\"0;URL=http://www.yahoo.com\">";
+}
+
+
+else {
+ echo "<meta http-equiv=\"refresh\" content=\"0;URL=http://www.google.com\">";
+    
+    
+}
+
+
+
+?> 
+ 
+</body>
+</html>
